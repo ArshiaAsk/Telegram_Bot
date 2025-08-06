@@ -1,13 +1,13 @@
-import telebot
+from telebot import TeleBot
 import time 
 import requests
-
+from config import API_token
 
 # print(requests.get("https://api.telegram.org").status_code)
 
 # requests.get("https://api.telegram.org/bot<7918952359:AAG4lzKbaWPZpijA9ck8deOxxUKiGgbKsXI>/deleteWebhook")
 
-bot = telebot.TeleBot('7918952359:AAG4lzKbaWPZpijA9ck8deOxxUKiGgbKsXI')
+bot = TeleBot(API_token)
 
 @bot.message_handler(commands=['start', 'help'])
 def welcome(message):
